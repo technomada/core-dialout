@@ -1,0 +1,1 @@
+next: (review and) make as a github repo .. and or teach how to docker build.

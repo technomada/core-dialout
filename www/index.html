@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Dialout</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			html {height: 100%;}
+			body {
+				height: 100%; margin: 0; padding: 0;
+				background: #181821;
+				color: #ccc;
+				font-family: monospace, monospace;
+				font-size: 16px;
+				}
+
+			body {
+				display: grid;
+				grid-template-rows: 1fr auto;
+				}
+
+			main {
+				display: grid;
+				place-items: center;
+				}
+
+			input {
+				outline: none;
+				border: none;
+				background: none;
+				color: #ccc;
+				text-align: center;
+				font-size: 8vw;
+				font-family: monospace, monospace;
+				width: 100%;
+				}
+
+			footer {
+				display: grid;
+				place-items: center;
+				opacity: 0.25;	
+				}
+
+			.loading {text-align: center; opacity: 0.25;}
+
+			.hidden {display: none;}
+
+			noscript {text-align: center;}
+
+			main {display: none;}
+
+			main.ready {display: grid;}
+
+			input {background: #111;}
+			input:focus {background: none;}
+
+			a {color: #dedee8; text-decoration: none; font-weight: bold;}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			Noscript - requesting permission to run as an application.
+		</noscript>
+		<div class='loading'>Loading</div>
+		<main>
+			<div class='content'>
+				<form>
+					<input autofocus>
+				</form>
+			</div>
+		</main>
+		<footer>
+			D I A L O U T
+			<a class='login hidden' href='#'>Login</a>
+		</footer>
+	<script src='./twilio.min.js'></script>
+	<script type='module'>import './main.js'</script>
+	<script>
+		document.querySelector('.loading').classList.add('hidden')
+	</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+#######################
+# localhost docker-compose example
+#
+
+version: "2.1"
+services:
+  app:
+    image: technomada/core-dialout
+    environment:
+      - PORT=3000
+      - accountSid=ACxxxxxxxxxxxxxxxxxxxxxxxxxx
+      - authToken=xxxxxxxxxxxxxxxxxxxx
+      - applicationSid=ASxxxxxxxxxxxxxxxxxxxxxxxxxx
+      - callerId=+15555555555
+      - authURL=https://auth.example.com
+    volumes:
+      - ./config.js:/app/config.js
+    ports:
+      - 3008:3000
+    working_dir: /app
+    restart: always
+
+networks:
+  default:
+    external:
+      name: master

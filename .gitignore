@@ -1,0 +1,4 @@
+node_modules/
+docker-compose-localhost.yaml
+config.js
+npm-debug.log
